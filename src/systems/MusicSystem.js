@@ -70,8 +70,7 @@ export class MusicSystem extends createSystem({
             // iwsdk entities usually have helper methods.
 
             // Safest way without docs: Remove and Add component to restart
-            const audioComp = entity.getComponent(AudioSource);
-            if (audioComp) {
+            if (entity.hasComponent(AudioSource)) {
                 // If there's a way to set src, good. Defaults to recreating component.
                 entity.removeComponent(AudioSource);
             }
